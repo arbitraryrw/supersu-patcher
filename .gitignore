@@ -130,3 +130,6 @@ dmypy.json
 
 # Test files
 tests/
+
+# Output directory
+output/
