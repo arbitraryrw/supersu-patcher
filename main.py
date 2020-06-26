@@ -1,21 +1,16 @@
 #!/usr/bin/env python3
 
 import os
-import shutil
-import zipfile
 from argparse import ArgumentParser
 
 print("[INFO] supersu patcher running...")
 
 from src.utils.utils import Utils
 from src.utils.config import Config
-from src.core.patcher import Patcher
+from src.core.core import Core
 
-u = Utils()
-c = Config()
-p = Patcher()
+utils = Utils()
 
-exit(1)
 
 parser = ArgumentParser(description='supersu patcher')
 
@@ -46,20 +41,11 @@ output_path = os.path.join(root_path, "output")
 base_zip_name = os.path.basename(abs_zip_path)
 unzip_abs_path = os.path.join(output_path, "unzipped-" + base_zip_name)
 
+
 # Recursively delete the old output dir if there is one
-if os.path.isdir(output_path):
-    try:
-        shutil.rmtree(output_path)
-    except OSError:
-        print ("Deletion of the directory %s failed" % path)
+utils.delete_dir_tree(output_path)
 
 # Create an output dir
-try:
-    os.makedirs(output_path)
-except OSError:
-    print ("Creation of the directory %s failed" % output_path)
-else:
-    print ("Successfully created the directory %s" % output_path)
+utils.create_dir(output_path)
 
-with zipfile.ZipFile(abs_zip_path,"r") as zip_ref:
-    zip_ref.extractall(os.path.join(output_path, "unzipped-" + base_zip_name))
+print("Unzipped dir", utils.unzip(abs_zip_path, output_path))
