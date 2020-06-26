@@ -2,6 +2,14 @@
 
 class Config:
 
+    abs_zip_path = None
+    root_dir_path = None
+    output_dir_path = None
+    unzip_dir_path = None
+
+
     def __init__(self):
-        print("Config running..")
+        pass
+
+    def __del__(self):
         pass

@@ -1,8 +1,14 @@
 
+
+from src.utils.config import Config
 from src.core.patcher import Patcher
 
 class Core:
-    patcher = Patcher()
+    
+    patcher = None
 
     def __init__(self):
-        print("Core initialised!!")
+        self.patcher = Patcher()
+
+    def start(self):
+        print("Starting core logic..")
