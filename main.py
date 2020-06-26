@@ -7,6 +7,15 @@ from argparse import ArgumentParser
 
 print("[INFO] supersu patcher running...")
 
+from src.utils.utils import Utils
+from src.utils.config import Config
+from src.core.patcher import Patcher
+
+u = Utils()
+c = Config()
+p = Patcher()
+
+exit(1)
 
 parser = ArgumentParser(description='supersu patcher')
 
