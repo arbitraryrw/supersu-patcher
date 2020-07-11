@@ -5,7 +5,7 @@ from src.utils.config import Config
 class Patcher:
 
     def __init__(self):
-        print("Patcher Running...")
+        pass
 
     def patch(self):
         pass
