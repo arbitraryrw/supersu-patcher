@@ -10,6 +10,29 @@ Run the `run.py` python3 file and pass the SuperSU archive as a parameter as see
 python3 run.py -i <path_to_supersu_archive>
 ```
 
+### Further Usage
+For further usage instructions please refer to the help dialogue.
+
+```bash
+➜ python3 run.py --help
+
+usage: run.py [-h] [-q] [-p] [-o DIRECTORY] -i SUPERSU ZIP
+
+supersu patcher
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -q, --quiet           don't print status messages to stdout
+  -p, --purge           purge output directory before running
+  -o DIRECTORY, --ouput DIRECTORY
+                        output directory for final artifacts
+
+required arguments:
+  -i SUPERSU ZIP, --input SUPERSU ZIP
+                        input super su file to patch
+
+```
+
 ### Python3 Dependencies
 All the python3 dependencies are documented in the [requirements.txt](https://github.com/arbitraryrw/supersu-patcher/blob/master/requirements.txt) file, to install the dependencies run:
 
