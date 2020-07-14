@@ -60,8 +60,18 @@ else:
     Config.root_dir_path = os.path.dirname(os.path.realpath(__file__))
     Config.output_dir_path = os.path.join(Config.root_dir_path, "output")
 
+Config.archive_copy_path = os.path.join(
+    Config.output_dir_path, "copy-" + 
+    os.path.basename(Config.archive_path)
+)
+
 Config.unzip_dir_path = os.path.join(
     Config.output_dir_path, "unzipped-" + 
+    os.path.basename(Config.archive_path)
+)
+
+Config.output_archive_path = os.path.join(
+    Config.output_dir_path, "patched-" + 
     os.path.basename(Config.archive_path)
 )
 
