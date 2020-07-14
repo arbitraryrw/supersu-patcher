@@ -28,5 +28,20 @@ class Core:
         # Create an output dir
         self.utils.create_dir(Config.output_dir_path)
 
+        # Create a copy of the original artifact
+        self.utils.copy_file(Config.archive_path, Config.archive_copy_path)
+
         # Unzip archive
-        self.utils.unzip(Config.archive_path, Config.unzip_dir_path)
+        self.utils.unzip_archive(
+            Config.archive_copy_path, 
+            Config.unzip_dir_path
+        )
+
+        # ToDo: Patching functionality
+        self.patcher.patch()
+
+        # Zip patched files into output archive
+        self.utils.zip_archive(
+            Config.unzip_dir_path, 
+            Config.output_archive_path
+        )
