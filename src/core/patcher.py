@@ -8,16 +8,34 @@ from sys import exit
 
 class Patcher:
     
-    init_patch_dict = {
-        "path": "new_path"
-    }
+    init_patch_dict = {}
 
     clean_up_patch_dict = {
-        "path": "new_path"
+        "nupernu":"supernu",
+        "nupersu":"supernu"
     }
 
     file_patch_dict={
-        "path": "new_path"
+        "/arm64/libsupol.so":                           "/arm64/libnupol.so",
+        "/arm64/su":                                    "/arm64/nu",
+        "/arm64/suinit":                                "/arm64/nuinit",
+        "/arm64/sukernel":                              "/arm64/nukernel",
+        "/arm64/supolicy":                              "/arm64/nupolicy",
+        "/arm64/chromeos/futility":                     "/arm64/chromeos/futility",
+
+        "/META-INF/MANIFEST.MF":                        "/META-INF/MANIFEST.MF",
+        "/META-INF/CERT.SF":                            "/META-INF/CERT.SF",
+
+        "/META-INF/com/google/android/update-binary":   "/META-INF/com/google/android/update-binary",
+
+        "/common/000000deepsleep":                      "/common/000000deepsleep",
+        "/common/file_contexts_image":                  "/common/file_contexts_image",
+        "/common/install-recovery.sh":                  "/common/install-recovery.sh",
+        "/common/Superuser.apk":                        "/common/Superuser.apk" ,
+        "/common/init.supersu.rc":                      "/common/init.supernu.rc",
+        "/common/frp_install":                          "/common/frp_install",
+        "/common/launch_daemonsu.sh":                   "/common/launch_daemonnu.sh",
+        "/common/init.supersu.rc.24":                   "/common/init.supernu.rc.24"
     }
 
     def __init__(self):
