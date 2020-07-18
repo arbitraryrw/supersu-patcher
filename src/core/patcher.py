@@ -80,6 +80,9 @@ class Patcher:
         "SuperUser":                                    "NuperUser",
         "sugote":                                       "nugote",
         "99SuperSUDaemon":                              "99SuperNUDaemon",
+
+        # libsupol.so
+        "libsupol":                                     "libnupol",
     }
 
     clean_up_patch_dict = {
