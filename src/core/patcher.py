@@ -8,7 +8,45 @@ from sys import exit
 
 class Patcher:
     
-    init_patch_dict = {}
+    init_patch_dict = {
+        "/.supersu":                                   "/.supersu",
+
+        "/system/xbin/su":                              "/system/xbin/nu",
+        "/system/xbin/daemonsu":                        "/system/xbin/daemonnu",
+        "/system/xbin/sugote":                          "/system/xbin/nugote",
+        "/system/xbin/sugote-mksh":                     "/system/xbin/nugote-mksh",
+        "/system/xbin/supolicy":                        "/system/xbin/nupolicy",
+        "/system/xbin/ku.sud":                          "/system/xbin/ku.nud",
+        "/system/xbin/.ku":                             "/system/xbin/.nu",
+        "/system/xbin/.su":                             "/system/xbin/.nu",
+        "/system/lib/libsupol.so":                      "/system/lib/libnupol.so",
+        "/system/lib64/libsupol.so":                    "/system/lib64/libnupol.so",
+        "/system/bin/.ext/.su":                         "/system/bin/.ext/.nu",
+        "/system/etc/init.d/99SuperSUDaemon":           "/system/etc/init.d/99SuperNUDaemon",
+        "/system/etc/.installed_su_daemon":             "/system/etc/.installed_nu_daemon",
+
+        "/system/app/Superuser.apk":                    "/system/app/Superuser.apk",
+        "/system/app/Superuser.odex":                   "/system/app/Superuser.odex",
+        "/system/app/Superuser":                        "/system/app/Superuser",
+        "/system/app/SuperUser.apk":                    "/system/app/SuperUser.apk",
+        "/system/app/SuperUser.odex":                   "/system/app/SuperUser.odex",
+        "/system/app/SuperUser":                        "/system/app/SuperUser",
+        "/system/app/superuser.apk":                    "/system/app/superuser.apk",
+        "/system/app/superuser.odex":                   "/system/app/superuser.odex",
+        "/system/app/superuser":                        "/system/app/superuser",
+        "/system/app/Supersu.apk":                      "/system/app/Supersu.apk",
+        "/system/app/Supersu.odex":                     "/system/app/Supersu.odex",
+        "/system/app/Supersu":                          "/system/app/Supersu",
+        "/system/app/SuperSU.apk":                      "/system/app/SuperSU.apk",
+        "/system/app/SuperSU.odex":                     "/system/app/SuperSU.odex",
+        "/system/app/SuperSU":                          "/system/app/SuperSU",
+        "/system/app/supersu.apk":                      "/system/app/supersu.apk",
+        "/system/app/supersu.odex":                     "/system/app/supersu.odex",
+        "/system/app/supersu":                          "/system/app/supersu",
+        "/system/app/VenomSuperUser.apk":               "/system/app/VenomSuperUser.apk",
+        "/system/app/VenomSuperUser.odex":              "/system/app/VenomSuperUser.odex",
+        "/system/app/VenomSuperUser":                   "/system/app/VenomSuperUser",
+    }
 
     clean_up_patch_dict = {
         "nupernu":"supernu",
