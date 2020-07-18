@@ -83,6 +83,13 @@ class Patcher:
 
         # libsupol.so
         "libsupol":                                     "libnupol",
+
+        #su
+        "supersu":                                      "supernu",
+        "Supersu":                                      "Supernu",
+        "SuperSU":                                      "SuperNU",
+        "daemonsu":                                     "daemonnu",
+        "sudaemon":                                     "nudaemon",
     }
 
     clean_up_patch_dict = {
