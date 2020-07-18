@@ -90,6 +90,9 @@ class Patcher:
         "SuperSU":                                      "SuperNU",
         "daemonsu":                                     "daemonnu",
         "sudaemon":                                     "nudaemon",
+
+        #sukernel
+        "sukernel":                                     "nukernel",
     }
 
     clean_up_patch_dict = {
