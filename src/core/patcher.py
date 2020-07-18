@@ -93,6 +93,11 @@ class Patcher:
 
         #sukernel
         "sukernel":                                     "nukernel",
+
+        #supolicy
+        "supolicy":                                     "nupolicy",
+
+        "/su":                                          "/nu"
     }
 
     clean_up_patch_dict = {
