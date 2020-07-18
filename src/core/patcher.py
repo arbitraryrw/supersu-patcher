@@ -46,6 +46,40 @@ class Patcher:
         "/system/app/VenomSuperUser.apk":               "/system/app/VenomSuperUser.apk",
         "/system/app/VenomSuperUser.odex":              "/system/app/VenomSuperUser.odex",
         "/system/app/VenomSuperUser":                   "/system/app/VenomSuperUser",
+
+        "/sutmp":                                       "/nutmp",
+        "SU=su":                                        "SU=nu",
+        "SU=su.pie":                                    "SU=nu.pie",
+        "APKNAME=/system/app/SuperSU/SuperSU.apk":      "APKNAME=/system/app/SuperSU/SuperSU.apk",
+
+        "/system/bin/su":                               "/system/bin/nu",
+        "/system/sbin/su":                              "/system/sbin/nu",
+        "/vendor/sbin/su":                              "/vendor/sbin/nu",
+        "/vendor/bin/su":                               "/vendor/bin/nu",
+        "/vendor/xbin/su":                              "/vendor/xbin/nu",
+        "/data/su.img":                                 "/data/nu.img",
+        "/cache/su.img":                                "/cache/nu.img",
+
+        "/su/bin":                                      "/nu/bin",
+        "/su/xbin":                                     "/nu/xbin",
+        "/su/lib":                                      "/nu/lib",
+        "/su/etc":                                      "/nu/etc",
+        "/su/su.d":                                     "/nu/nu.d",
+
+        "/su/bin/app_process":                          "/nu/bin/app_process",
+        "/su/bin/sush":                                 "/nu/bin/nush",
+        "/su/bin/su":                                   "/nu/bin/nu",
+        "/su/bin/su_*":                                 "/nu/bin/nu_*",
+
+
+        "/su/xbin_bind":                                "/nu/xbin_bind",
+        "${CPIO_PREFIX}su":                             "${CPIO_PREFIX}nu",
+        "/suinit":                                      "/nuinit",
+        "Superuser":                                    "Superuser",
+        "superuser":                                    "superuser",
+        "SuperUser":                                    "NuperUser",
+        "sugote":                                       "nugote",
+        "99SuperSUDaemon":                              "99SuperNUDaemon",
     }
 
     clean_up_patch_dict = {
