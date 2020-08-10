@@ -30,8 +30,10 @@ optional arguments:
 required arguments:
   -i SUPERSU ZIP, --input SUPERSU ZIP
                         input super su file to patch
-
 ```
+
+### System Dependencies
+This project requires [radare2](https://github.com/radareorg/radare2) to be installed on the system.
 
 ### Python3 Dependencies
 All the python3 dependencies are documented in the [requirements.txt](https://github.com/arbitraryrw/supersu-patcher/blob/master/requirements.txt) file, to install the dependencies run:
