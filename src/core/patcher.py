@@ -90,6 +90,8 @@ class Patcher:
         "SuperSU":                                      "SuperNU",
         "daemonsu":                                     "daemonnu",
         "sudaemon":                                     "nudaemon",
+        "/dev/.su.d":                                   "/dev/.nu.d",
+        "/dev/.su.d.complete":                          "/dev/.nu.d.complete",
 
         #sukernel
         "sukernel":                                     "nukernel",
